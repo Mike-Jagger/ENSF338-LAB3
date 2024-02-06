@@ -11,7 +11,7 @@ def custom_sort(arr):
             num_comparisons += 1  
             if arr[j] > arr[j+1]:
                 arr[j], arr[j+1] = arr[j+1], arr[j] 
-                num_swaps += 1  
+                num_swaps += 1
                 
     return arr, num_comparisons, num_swaps
 
@@ -38,25 +38,25 @@ def visualize_results(results):
     swaps = results['swaps']
 
     plt.figure(figsize=(12, 6))
-
-    plt.subplot(1, 2, 1)
     plt.plot(sizes, comparisons, label='Comparisons', marker='o')
     plt.title('Number of Comparisons')
     plt.xlabel('Input Size')
     plt.ylabel('Number of Comparisons')
     plt.grid(True)
     plt.legend()
+    plt.tight_layout()
+    plt.savefig('custom_sort_comparisons.png')
+    plt.show()
 
-    plt.subplot(1, 2, 2)
+    plt.figure(figsize=(12, 6))
     plt.plot(sizes, swaps, label='Swaps', color='r', marker='o')
     plt.title('Number of Swaps')
     plt.xlabel('Input Size')
     plt.ylabel('Number of Swaps')
     plt.grid(True)
     plt.legend()
-
     plt.tight_layout()
-    plt.savefig('custom_sort_analysis.png')
+    plt.savefig('custom_sort_swaps.png')
     plt.show()
 
 if __name__ == "__main__":
