@@ -74,4 +74,4 @@ plt.show()
 # Q4
 
 # - Larger datasets has more efficiency using quick-sort and using binary search compared to linear search.
-# - Smaller datasets has si,ilar behaviours for both search strategies.
+# - Smaller datasets has a less difference in efficiency for both search strategies.
